@@ -8,30 +8,26 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import be.freman.my500px.model.MyPhoto;
-import be.freman.my500px.repository.MyPhotoRepository;
-import be.freman.my500px.repository.MyPhotoRepositoryImpl;
-import be.freman.my500px.service.MyPxService;
-import be.freman.my500px.service.MyPxServiceImpl;
+import be.freman.my500px.model.PxPhotoDetails;
+import be.freman.my500px.service.PxService;
+import be.freman.my500px.service.PxServiceImpl;
 
 @Path("photo")
 public class MyPhotoResource {
 	
-	MyPhotoRepository photoRepository = new MyPhotoRepositoryImpl(); 
+	PxService pxService = new PxServiceImpl(); 
 	
-	MyPxService myPxService = new MyPxServiceImpl();
-
 	@GET
-	@Path("{photoId}")
+	@Path("{pxPhotoId}")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Response update(@PathParam ("photoId") Integer photoId){
-		MyPhoto photo = photoRepository.find(photoId);
+	public Response update(@PathParam ("pxPhotoId") Integer pxPhotoId){
+		PxPhotoDetails pxPhotoDetails = pxService.getPhotoDetails(pxPhotoId);
 		
-		if(photo == null){
+		if(pxPhotoDetails == null){
 			return Response.status(Status.NOT_FOUND).build();
 		}
 		
-		return Response.ok().entity(photo).build();		
+		return Response.ok().entity(pxPhotoDetails).build();		
 	}
 	
 }

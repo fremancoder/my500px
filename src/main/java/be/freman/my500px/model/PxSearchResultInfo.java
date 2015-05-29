@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class PxSearchResultInfo
 {
-    private List<PxPhotos> photos;
+    private List<PxPhoto> photos;
 
     private Integer total_items;
 
@@ -19,34 +19,9 @@ public class PxSearchResultInfo
 
     private Integer current_page;
 
-    public List<PxPhotos> getPhotos ()
+    public Integer getCurrent_page ()
     {
-        return photos;
-    }
-
-    public void setPhotos (List<PxPhotos> photos)
-    {
-        this.photos = photos;
-    }
-
-    public Integer getTotal_items ()
-    {
-        return total_items;
-    }
-
-    public void setTotal_items (Integer total_items)
-    {
-        this.total_items = total_items;
-    }
-
-    public Integer getTotal_pages ()
-    {
-        return total_pages;
-    }
-
-    public void setTotal_pages (Integer total_pages)
-    {
-        this.total_pages = total_pages;
+        return current_page;
     }
 
     public String getFeature ()
@@ -54,24 +29,24 @@ public class PxSearchResultInfo
         return feature;
     }
 
-    public void setFeature (String feature)
-    {
-        this.feature = feature;
-    }
-
     public PxFilters getFilters ()
     {
         return filters;
     }
 
-    public void setFilters (PxFilters filters)
+    public List<PxPhoto> getPhotos ()
     {
-        this.filters = filters;
+        return photos;
     }
 
-    public Integer getCurrent_page ()
+    public Integer getTotal_items ()
     {
-        return current_page;
+        return total_items;
+    }
+
+    public Integer getTotal_pages ()
+    {
+        return total_pages;
     }
 
     public void setCurrent_page (Integer current_page)
@@ -79,9 +54,29 @@ public class PxSearchResultInfo
         this.current_page = current_page;
     }
 
-    @Override
-    public String toString()
+    public void setFeature (String feature)
     {
-        return "ClassPojo [photos = "+photos+", total_items = "+total_items+", total_pages = "+total_pages+", feature = "+feature+", filters = "+filters+", current_page = "+current_page+"]";
+        this.feature = feature;
     }
+
+    public void setFilters (PxFilters filters)
+    {
+        this.filters = filters;
+    }
+
+    public void setPhotos (List<PxPhoto> photos)
+    {
+        this.photos = photos;
+    }
+
+    public void setTotal_items (Integer total_items)
+    {
+        this.total_items = total_items;
+    }
+
+    public void setTotal_pages (Integer total_pages)
+    {
+        this.total_pages = total_pages;
+    }
+   
 }

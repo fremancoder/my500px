@@ -13,34 +13,14 @@ public class PxImages
 
     private String size;
 
-    public String getHttps_url ()
-    {
-        return https_url;
-    }
-
-    public void setHttps_url (String https_url)
-    {
-        this.https_url = https_url;
-    }
-
     public String getFormat ()
     {
         return format;
     }
 
-    public void setFormat (String format)
+    public String getHttps_url ()
     {
-        this.format = format;
-    }
-
-    public String getUrl ()
-    {
-        return url;
-    }
-
-    public void setUrl (String url)
-    {
-        this.url = url;
+        return https_url;
     }
 
     public String getSize ()
@@ -48,14 +28,29 @@ public class PxImages
         return size;
     }
 
+    public String getUrl ()
+    {
+        return url;
+    }
+
+    public void setFormat (String format)
+    {
+        this.format = format;
+    }
+
+    public void setHttps_url (String https_url)
+    {
+        this.https_url = https_url;
+    }
+
     public void setSize (String size)
     {
         this.size = size;
     }
 
-    @Override
-    public String toString()
+    public void setUrl (String url)
     {
-        return "ClassPojo [https_url = "+https_url+", format = "+format+", url = "+url+", size = "+size+"]";
+        this.url = url;
     }
+
 }

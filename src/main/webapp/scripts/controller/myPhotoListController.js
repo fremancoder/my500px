@@ -18,7 +18,6 @@
 		};
 		
 		$scope.showDetails = function(photoid){
-			console.log('MyPhotoListController in showDetails');
 			$location.path("/myPhotoDetails/" + photoid);
 		};
 		

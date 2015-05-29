@@ -11,6 +11,7 @@
 					<thead>
 						<tr>
 							<th><a ng-click="sort='name'; reverse=!reverse">Title</a></th>
+							<th><a ng-click="sort='votes_count'; reverse=!reverse">Nbr. Views</a></th>
 							<th><a ng-click="sort='votes_count'; reverse=!reverse">Nbr. Likes</a></th>
 							<th><a ng-click="sort='favorites_count'; reverse=!reverse">Nbr. Favourites</a></th>
 							<th>Current pulse</th>
@@ -21,11 +22,12 @@
 					<tbody>
 						<tr ng-repeat="photo in myPhotos | filter:filter | orderBy:sort:reverse" ng-show="!error">
 							<td>{{photo.name}}</td>
+							<td>{{photo.times_viewed}}</td>
 							<td>{{photo.votes_count}}</td>
 							<td>{{photo.favorites_count}}</td>
 							<td>{{photo.rating}}</td>
 							<td>{{photo.highest_rating}}</td>
-							<td><a ng-click="showDetails(photo.id)" >View photo</a></td>
+							<td><a ng-click="showDetails(photo.pxid)" >View photo</a></td>
 						</tr>
 						<tr ng-show="error">
 							<td colspan="7">{{error}}</td>						

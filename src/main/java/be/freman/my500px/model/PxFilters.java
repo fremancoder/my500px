@@ -16,9 +16,9 @@ public class PxFilters
         return category;
     }
 
-    public void setCategory (String category)
+    public String getExclude ()
     {
-        this.category = category;
+        return exclude;
     }
 
     public String getUser_id ()
@@ -26,14 +26,9 @@ public class PxFilters
         return user_id;
     }
 
-    public void setUser_id (String user_id)
+    public void setCategory (String category)
     {
-        this.user_id = user_id;
-    }
-
-    public String getExclude ()
-    {
-        return exclude;
+        this.category = category;
     }
 
     public void setExclude (String exclude)
@@ -41,9 +36,9 @@ public class PxFilters
         this.exclude = exclude;
     }
 
-    @Override
-    public String toString()
+    public void setUser_id (String user_id)
     {
-        return "ClassPojo [category = "+category+", user_id = "+user_id+", exclude = "+exclude+"]";
+        this.user_id = user_id;
     }
+   
 }

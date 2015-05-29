@@ -1,17 +1,17 @@
 package be.freman.my500px.service.mapper;
 
 import be.freman.my500px.model.MyPhoto;
-import be.freman.my500px.model.PxPhotos;
+import be.freman.my500px.model.PxPhoto;
 
 public class PxToMyPhotoMapper {
 
-	public MyPhoto map(PxPhotos pxPhoto){
+	public MyPhoto map(PxPhoto pxPhoto){
 		MyPhoto myPhoto = new MyPhoto();
 		map(myPhoto, pxPhoto);
 		return myPhoto;
 	}
 
-	public void map(MyPhoto myPhoto, PxPhotos pxPhoto) {
+	public void map(MyPhoto myPhoto, PxPhoto pxPhoto) {
 		myPhoto.setComments_count(pxPhoto.getComments_count());
 		myPhoto.setFavorites_count(pxPhoto.getFavorites_count());
 		myPhoto.setHighest_rating(pxPhoto.getHighest_rating());

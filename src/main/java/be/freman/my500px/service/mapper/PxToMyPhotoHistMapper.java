@@ -1,11 +1,11 @@
 package be.freman.my500px.service.mapper;
 
 import be.freman.my500px.model.MyPhotoHist;
-import be.freman.my500px.model.PxPhotos;
+import be.freman.my500px.model.PxPhoto;
 
 public class PxToMyPhotoHistMapper {
 
-	public MyPhotoHist map(PxPhotos pxPhoto){
+	public MyPhotoHist map(PxPhoto pxPhoto){
 		MyPhotoHist myPhotoHist = new MyPhotoHist();
 		
 		myPhotoHist.setComments_count(pxPhoto.getComments_count());

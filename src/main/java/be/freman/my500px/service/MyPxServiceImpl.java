@@ -2,7 +2,7 @@ package be.freman.my500px.service;
 
 import be.freman.my500px.model.MyPhoto;
 import be.freman.my500px.model.MyPhotoHist;
-import be.freman.my500px.model.PxPhotos;
+import be.freman.my500px.model.PxPhoto;
 import be.freman.my500px.model.PxSearchResultInfo;
 import be.freman.my500px.repository.MyPhotoHistRepository;
 import be.freman.my500px.repository.MyPhotoHistRepositoryImpl;
@@ -33,8 +33,8 @@ public class MyPxServiceImpl implements MyPxService{
 	private void syncPage(int page) {
 		PxSearchResultInfo pxSearchResultInfo = pxService.getPhotos(page);
 		
-		for (PxPhotos pxPhoto : pxSearchResultInfo.getPhotos()) {
-			MyPhoto myPhoto = myPhotoRepository.find(pxPhoto.getId());
+		for (PxPhoto pxPhoto : pxSearchResultInfo.getPhotos()) {
+			MyPhoto myPhoto = myPhotoRepository.findByPxId(pxPhoto.getId());
 			if(myPhoto != null){
 				photoMapper.map(myPhoto, pxPhoto);
 				myPhotoRepository.update(myPhoto);

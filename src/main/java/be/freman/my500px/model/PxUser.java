@@ -30,87 +30,14 @@ public class PxUser
     private String username;
 
     private String userpic_url;
+    
+    private String followers_count;
 
     private String fullname;
-
-    public String getStore_on ()
-    {
-        return store_on;
-    }
-
-    public void setStore_on (String store_on)
-    {
-        this.store_on = store_on;
-    }
 
     public String getAffection ()
     {
         return affection;
-    }
-
-    public void setAffection (String affection)
-    {
-        this.affection = affection;
-    }
-
-    public String getCover_url ()
-    {
-        return cover_url;
-    }
-
-    public void setCover_url (String cover_url)
-    {
-        this.cover_url = cover_url;
-    }
-
-    public String getUpgrade_status ()
-    {
-        return upgrade_status;
-    }
-
-    public void setUpgrade_status (String upgrade_status)
-    {
-        this.upgrade_status = upgrade_status;
-    }
-
-    public String getUserpic_https_url ()
-    {
-        return userpic_https_url;
-    }
-
-    public void setUserpic_https_url (String userpic_https_url)
-    {
-        this.userpic_https_url = userpic_https_url;
-    }
-
-    public String getLastname ()
-    {
-        return lastname;
-    }
-
-    public void setLastname (String lastname)
-    {
-        this.lastname = lastname;
-    }
-
-    public String getUsertype ()
-    {
-        return usertype;
-    }
-
-    public void setUsertype (String usertype)
-    {
-        this.usertype = usertype;
-    }
-
-    public String getFirstname ()
-    {
-        return firstname;
-    }
-
-    public void setFirstname (String firstname)
-    {
-        this.firstname = firstname;
     }
 
     public String getCity ()
@@ -118,19 +45,28 @@ public class PxUser
         return city;
     }
 
-    public void setCity (String city)
-    {
-        this.city = city;
-    }
-
     public String getCountry ()
     {
         return country;
     }
 
-    public void setCountry (String country)
+    public String getCover_url ()
     {
-        this.country = country;
+        return cover_url;
+    }
+
+    public String getFirstname ()
+    {
+        return firstname;
+    }
+
+    public String getFollowers_count() {
+		return followers_count;
+	}
+
+    public String getFullname ()
+    {
+        return fullname;
     }
 
     public String getId ()
@@ -138,9 +74,19 @@ public class PxUser
         return id;
     }
 
-    public void setId (String id)
+    public String getLastname ()
     {
-        this.id = id;
+        return lastname;
+    }
+
+    public String getStore_on ()
+    {
+        return store_on;
+    }
+
+    public String getUpgrade_status ()
+    {
+        return upgrade_status;
     }
 
     public String getUsername ()
@@ -148,9 +94,9 @@ public class PxUser
         return username;
     }
 
-    public void setUsername (String username)
+    public String getUserpic_https_url ()
     {
-        this.username = username;
+        return userpic_https_url;
     }
 
     public String getUserpic_url ()
@@ -158,25 +104,85 @@ public class PxUser
         return userpic_url;
     }
 
-    public void setUserpic_url (String userpic_url)
+    public String getUsertype ()
     {
-        this.userpic_url = userpic_url;
+        return usertype;
     }
 
-    public String getFullname ()
+    public void setAffection (String affection)
     {
-        return fullname;
+        this.affection = affection;
     }
+
+    public void setCity (String city)
+    {
+        this.city = city;
+    }
+
+    public void setCountry (String country)
+    {
+        this.country = country;
+    }
+
+    public void setCover_url (String cover_url)
+    {
+        this.cover_url = cover_url;
+    }
+
+    public void setFirstname (String firstname)
+    {
+        this.firstname = firstname;
+    }
+
+    public void setFollowers_count(String followers_count) {
+		this.followers_count = followers_count;
+	}
 
     public void setFullname (String fullname)
     {
         this.fullname = fullname;
     }
 
-    @Override
-    public String toString()
+    public void setId (String id)
     {
-        return "ClassPojo [store_on = "+store_on+", affection = "+affection+", cover_url = "+cover_url+", upgrade_status = "+upgrade_status+", userpic_https_url = "+userpic_https_url+", lastname = "+lastname+", usertype = "+usertype+", firstname = "+firstname+", city = "+city+", country = "+country+", id = "+id+", username = "+username+", userpic_url = "+userpic_url+", fullname = "+fullname+"]";
+        this.id = id;
     }
+
+    public void setLastname (String lastname)
+    {
+        this.lastname = lastname;
+    }
+
+    public void setStore_on (String store_on)
+    {
+        this.store_on = store_on;
+    }
+
+    public void setUpgrade_status (String upgrade_status)
+    {
+        this.upgrade_status = upgrade_status;
+    }
+
+    public void setUsername (String username)
+    {
+        this.username = username;
+    }
+
+    public void setUserpic_https_url (String userpic_https_url)
+    {
+        this.userpic_https_url = userpic_https_url;
+    }
+
+    
+    public void setUserpic_url (String userpic_url)
+    {
+        this.userpic_url = userpic_url;
+    }
+
+	public void setUsertype (String usertype)
+    {
+        this.usertype = usertype;
+    }
+
 }
 

@@ -5,12 +5,10 @@
 	var MyPhotoDetailController = function($scope, $http, $log, $routeParams) {
 		
 		var onPhotoGet = function(response){
-			console.log('MyPhotoDetailController in onPhotoGet');
 			$scope.photoDetails = response.data; 
 		}; 
 		
 		var onError = function(reason){
-			console.log('MyPhotoDetailController in onError');
 			$scope.error = "Could not fetch the data."; 
 		}; 
 
